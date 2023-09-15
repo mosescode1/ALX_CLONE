@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './login.scss'
 
-export const LoginPage = (props) =>{
+export const LoginPage = () =>{
     // the properties of the state is the same with the form input name
     const [fillForm, setForm] = useState({
         user_email: '',
@@ -23,10 +23,11 @@ export const LoginPage = (props) =>{
     }
     //Login and move to dashboard
     const nowLogin = () => {
-        // I still will need to valaidate details with database details
+        // I still will need to valaidate details with details in database
+        //Also, i will be making a GET request here
         navigate('/dashboard')
     };
-    
+
     return (
         <div className="container">
             <div className="header">
