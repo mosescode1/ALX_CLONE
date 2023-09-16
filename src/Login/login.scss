@@ -24,7 +24,7 @@ body {
             label {
                 font-weight: 700;
             }
-            #f_password, #f_email {
+            #f_password, #f_email, #up_name, #up_pass, #up_email, #up_state, #up_country {
                 width: 80%;
                 height: 30px;
                 margin: 10px;
@@ -60,6 +60,12 @@ body {
             color: rgba(219,62,62,255);
             text-decoration: none;
         }
+    }
+    #signup_cont {
+        height: auto;
+    }
+    #signup_but {
+        margin-bottom: 10px;
     }
 }
 @media only screen and (min-width:769px){

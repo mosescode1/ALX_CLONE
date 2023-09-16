@@ -32,6 +32,7 @@ export const LoginPage = () =>{
         <div className="container">
             <div className="header">
                 <div className="alx-bg"></div>
+                <p>Welcome ! Please sign in</p>
                 <form name="login-form" onSubmit={nowLogin} autoComplete="on">
                     <label for="f_email">Email</label><br/>
                     <input type="email" id="f_email" name="user_email" autoFocus="autofocus" value={fillForm.user_email} required onChange={handleForm}/><br/>

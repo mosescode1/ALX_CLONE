@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MyProfile = () => {
+export const Profile = () => {
     return (
         <div>This is My_profile menu</div>
     )
