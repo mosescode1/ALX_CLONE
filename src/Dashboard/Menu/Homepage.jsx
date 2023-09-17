@@ -1,12 +1,9 @@
 import React from 'react'
 import './Styles/homeMenu.scss'
-
+import './Styles/common.scss'
 export const HomePage = () => {
     return (  
-        <div className="rightContent">
-            <div className="signin">
-                New Captain's log to be filled before september 25, 2023 06:00 am
-            </div>
+        <div className="myHomeMenu">
             <div className="classScore">
                 <div className="upcoming">
                     <div className="eventHead">

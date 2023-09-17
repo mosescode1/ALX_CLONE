@@ -1,0 +1,29 @@
+.containerProj {
+    display: grid;
+    text-align: left;
+}
+.allProject {
+    display: grid;
+}
+.collapse {
+    .onboarding, .zeroday, .lowlevel, .highlevel, .sysdevops, .techwriting, .more, .portproj {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+        margin-bottom: 20px;
+    }
+    .onboarding div, .zeroday div, .lowlevel div, .highlevel div, .sysdevops div, 
+    .techwriting div, .more div, .portproj div {
+        border: 1px solid #e4e4e4;
+        height: 50px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+    }
+}
+.currProj {
+    border: 1px solid #e4e4e4;
+    height: 90px;
+    border-radius: 8px;
+}

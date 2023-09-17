@@ -33,7 +33,7 @@
         scrollbar-width: none; /* Hide scroll bar in firefox */
         -ms-overflow-style: none; /* Hide in internet explored and edge*/
         margin: 0 auto;
-        .icon-container{
+        .icon-container, .active{
             width: 45px;
             height: 45px;
             display: flex;
@@ -41,7 +41,7 @@
             align-items: center;
             cursor: pointer;
         }
-        .icon-container:hover {
+        .icon-container:hover, .active {
             border-radius: 10px;
             background-color: #db3e3e;
         }
@@ -80,7 +80,7 @@
             border-radius: 50%;
         }
         .slack{
-            background-image: url('../images/slack-new-logo.svg');
+            background-image: url('/src/images/slack-new-logo.svg');
         }
         .profilepic {
             border: 1px solid black;

@@ -2,7 +2,7 @@ import React from 'react'
 
 export const MyPlanning = () => {
     return (
-        <div className="rightContent">This is my_planning menu</div>
+        <div className="">This is my_planning menu</div>
     )
 }
 

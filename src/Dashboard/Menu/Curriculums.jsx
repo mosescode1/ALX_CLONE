@@ -2,6 +2,6 @@ import React from   'react'
 
 export const Curriculums = () => {
     return (
-        <div>This is the Curriculums menu</div>
+        <div className=''>This is the Curriculums menu</div>
     )
 }
