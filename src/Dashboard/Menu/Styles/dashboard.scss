@@ -2,133 +2,23 @@
     width: 100%;
     padding: 0px;
     margin: 0px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 80px 5fr;
     overflow: hidden;
     height: 100vh;
+}
+.rightContent {
+    padding: 10px 20px;
+    overflow-y: scroll;
 }
 .mobileView {
     display: none;
 }
-.leftMenu {
-    width: 80px;
-    height: calc(100vh - 1px);
-    border-right: 1px solid #e4e4e4;
-    border-top: 1px solid #e4e4e4;
-    display: grid;
-    grid-template-rows: 1fr 400px 1fr;
 
-    .logo, .menuFooter, .menuIcons {
-        border: 1px solid #e4e4e4;
-        border-right: 0px;
-    }
-    .logo {
-        border-top: 0px;
-        background-image: url('./src/images/alx-logo.png');
-        background-size:60%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        cursor: pointer;
-    }
-    .menuIcons {
-        border-top: 0px;
-        border-left: 0px;
-        overflow-y: scroll;
-        display: grid;
-        scrollbar-width: none; /* Hide scroll bar in firefox */
-        -ms-overflow-style: none; /* Hide in internet explored and edge*/
-        margin: 0 auto;
-        .line {
-            width: 80%;
-        }
-    }
-    .menuIcons::-webkit-scrollbar {
-        display: none;
-    }
-    .menuFooter {
-        border-top: 0px;
-        border-left: 0px;
-        display: grid;
-        margin: 0 auto;
-        #icon-container {
-            width: 45px;
-            height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        #icon-container:hover {
-            border-radius: 10px;
-            background-color: #db3e3e;
-        }
-        .slack, .profilepic {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-        .slack{
-            background-image: url('/src/images/slack-new-logo.svg');
-        }
-        .profilepic {
-            border: 1px solid black;
-        }
-    }
-}
-.icon-container, .active {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.icon {
-    width: 45px;
-    height: 20px;
-    color: #9b9696;
-}
-.icon:hover {
-    border-radius: 10px;
-    background-color: #db3e3e;
-    padding:13px;
-}
-.active {
-    border-radius: 10px;
-    background-color: #db3e3e;
-}
-.mobileIconName {
-    display: none;
-}
 @media only screen and (max-width: 769px) {
-    // .dashFrame {
-    //     // display: grid;
-    // }
-    // .leftMenu {
-    //     width: 100%;
-    //     background-color: rgba(248,249,250,255);
-    //     // border: 1px solid red;
-    //     height: 200px;
-    //     .menuIcons {
-    //         height: 200px;
-    //         width: 100%;
-    //     }
-    // }
-    // .icon-container {
-    //     // border: 2px solid black;
-    //     width: 100%;
-    // }
-    // .active {
-    //     width: 80px;
-    //     padding: 0px;
-    // }
-    // .mobileIconName {
-    //     display: block;
-    //     width: 60%;
-    // }
-    // .icon, .active {
-    //     width: 30px;
-    //     // height: 50%;
-    //     color: #9b9696;
-    //     padding:10px;
-    // }
+    .dashFrame {
+        grid-template-columns: 1fr;
+        overflow-y: scroll;
+    }
+
 }

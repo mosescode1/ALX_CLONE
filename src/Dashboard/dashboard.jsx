@@ -1,5 +1,6 @@
 import React from "react";
 import './Menu/Styles/dashboard.scss';
+import { AiFillCalendar, AiOutlineMenu } from 'react-icons/ai';
 import { useState } from "react";
 import { HomePage } from "./Menu/Homepage";
 import { MyPlanning } from "./Menu/My_planning";
@@ -16,18 +17,7 @@ import { VideoOnDemand } from "./Menu/Video_on_demand";
 import { Peers } from "./Menu/Peers";
 import { CaptainLog } from "./Menu/Captain_log";
 import { Profile } from "./Menu/Profile";
-import { AiFillCalendar, AiOutlineMenu } from 'react-icons/ai';
-import { PiGitBranchBold } from 'react-icons/pi';
-import { GrCheckmark } from 'react-icons/gr';
-import { BsQuestionLg } from 'react-icons/bs';
-import { FaGraduationCap } from 'react-icons/fa';
-import { BsFillFileEarmarkTextFill } from 'react-icons/bs';
-import { SiWechat } from 'react-icons/si';
-import { BiSolidServer, BiSolidBook } from 'react-icons/bi';
-import { LiaGreaterThanEqualSolid } from 'react-icons/lia';
-import { GiSpanner } from 'react-icons/gi';
-import { BsFilm } from 'react-icons/bs';
-import { MdGroups } from 'react-icons/md';
+import { Navigate } from "./Menu/navigation";
 
 
 export const DashBoard = () =>{
@@ -83,7 +73,7 @@ export const DashBoard = () =>{
                 setSelectedCompo(<Profile/>);
                 break;
             default:
-                setSelectedCompo(null)
+                setSelectedCompo(null);
         }
         //Capture the current menu icon clicked on to add styles to it
         setCurrMenu(currCompo);
@@ -94,77 +84,7 @@ export const DashBoard = () =>{
                 <div className="mobileLogo"></div>
                 <div className="mobileMenuIcon"><AiOutlineMenu/></div>
             </header> */}
-            <div className="leftMenu">
-                <div className="logo" onClick={() => handleMenu('Home_page')}></div>
-                <div className="menuIcons">
-                    <div className={currMenu == "My_planning" ? "active" : "icon-container"} onClick={() => handleMenu('My_planning')}>
-                        <AiFillCalendar className="icon" />
-                        <p className="mobileIconName">My Planning</p>
-                    </div>
-                    <div className={currMenu == "Projects" ? "active" : "icon-container"} onClick={() => handleMenu('Projects')}>
-                        <PiGitBranchBold className="icon" />
-                        <p className="mobileIconName">Projects</p>
-                    </div>
-                    <div className={currMenu == "QA" ? "active" : "icon-container"} onClick={() => handleMenu('QA')}>
-                        <GrCheckmark className="icon" />
-                        <p className="mobileIconName">QA Reviews I can make</p>
-                    </div>
-                    <div className={currMenu == "Quiz" ? "active" : "icon-container"} onClick={() => handleMenu('Quiz')}>
-                        <BsQuestionLg className="icon" />
-                        <p className="mobileIconName">Evaluation quizzes</p>
-                    </div>
-                    <hr className="line"/>
-                    <div className={currMenu == "Curriculum" ? "active" : "icon-container"} onClick={() => handleMenu('Curriculum')}>
-                        <FaGraduationCap className="icon" />
-                        <p className="mobileIconName">Curriculums</p>
-                    </div>
-                    <div className={currMenu == "Concepts" ? "active" : "icon-container"} onClick={() => handleMenu('Concepts')}>
-                        <BsFillFileEarmarkTextFill className="icon" />
-                        <p className="mobileIconName">Concepts</p>
-                    </div>
-                    <div className={currMenu == "Conference" ? "active" : "icon-container"} onClick={() => handleMenu('Conference')}>
-                        <SiWechat className="icon" />
-                        <p className="mobileIconName">Conference rooms</p>
-                    </div>
-                    <div className={currMenu == "Servers" ? "active" : "icon-container"} onClick={() => handleMenu('Servers')}>
-                        <BiSolidServer className="icon" />
-                        <p className="mobileIconName">Servers</p>
-                    </div>
-                    <div className={currMenu == "Sandboxes" ? "active" : "icon-container"} onClick={() => handleMenu('Sandboxes')}>
-                        <LiaGreaterThanEqualSolid className="icon" />
-                        <p className="mobileIconName">Sandboxes</p>
-                    </div>
-                    <div className={currMenu == "Tools" ? "active" : "icon-container"} onClick={() => handleMenu('Tools')}>
-                        <GiSpanner className="icon" />
-                        <p className="mobileIconName">Tools</p>
-                    </div>
-                    <div className={currMenu == "Video" ? "active" : "icon-container"} onClick={() => handleMenu('Video')}>
-                        <BsFilm className="icon" />
-                        <p className="mobileIconName">Video on demand</p>
-                    </div>
-                    <hr className="line"/>
-                    <div className={currMenu == "Peers" ? "active" : "icon-container"} onClick={() => handleMenu('Peers')}>
-                        <MdGroups className="icon" />
-                        <p className="mobileIconName">Peers</p>
-                    </div>
-                    <div className={currMenu == "Captain" ? "active" : "icon-container"} onClick={() => handleMenu('Captain')}>
-                        <BiSolidBook className="icon" />
-                        <p className="mobileIconName">Captain's Logs</p>
-                    </div><br/><br/>
-                </div>
-                <div className="menuFooter">
-                    <div id="icon-container">
-                    <a href="https://slack.com" target="_blank">
-                        <div className="slack"></div>
-                        <p className="mobileIconName">Slack</p>
-                    </a>
-                    </div>
-                    <div id="icon-container" onClick={() => handleMenu('Profile')}>
-                        <div className="profilepic"></div>
-                        <p className="mobileIconName">My Profile</p>
-                    </div>
-                </div>
-            </div>
+            <Navigate currMenu={currMenu} handleMenu={handleMenu}/>
             <div className="rightContent">
                 <div className="notification">
                     New Captain's log to be filled before september 25, 2023 06:00 am
