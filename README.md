@@ -1,8 +1,7 @@
 # ALX INTRANET CLONE
 
 ## Project Overview
-
-The ALX Intranet Clone project is a meticulous replication of the renowned ALX Software Engineering Learning Platform. This ambitious undertaking seeks to recreate and enhance the features and functionalities of the original platform, ensuring an immersive and effective learning experience for aspiring software engineers. Below, we provide a comprehensive overview of the project's key components and features:[platform](https://intranet.alxswe.com/) - Intranet.
+The ALX Intranet Clone project is a replication of the renowned ALX Software Engineering Learning Platform. This ambitious undertaking seeks to recreate and enhance the features and functionalities of the original platform, ensuring an immersive and effective learning experience for aspiring software engineers. Below, we provide a comprehensive overview of the project's key components and features:[platform](https://intranet.alxswe.com/) - Intranet.
 
 ## Project description
 
