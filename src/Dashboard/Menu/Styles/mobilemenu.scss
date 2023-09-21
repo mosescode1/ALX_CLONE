@@ -1,0 +1,37 @@
+.mobileView {
+    display: none;
+}
+
+@media only screen and (max-width: 769px) {
+    .mobileView {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        background-color: rgba(248,249,250,255);
+        margin-bottom: 1px;
+        scrollbar-width: none; /* Hide scroll bar in firefox */
+        -ms-overflow-style: none; 
+    }
+    .mobileLogo {
+        width: 40px;
+        height: 40px;
+        background-image: url('/src/images/alx.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .mobileMenuIcon {
+        height: 35px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        background-color: #e4e4e4;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

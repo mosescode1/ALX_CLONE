@@ -1,6 +1,5 @@
 import React from "react";
 import './Menu/Styles/dashboard.scss';
-import { AiFillCalendar, AiOutlineMenu } from 'react-icons/ai';
 import { useState } from "react";
 import { HomePage } from "./Menu/Homepage";
 import { MyPlanning } from "./Menu/My_planning";
@@ -18,6 +17,7 @@ import { Peers } from "./Menu/Peers";
 import { CaptainLog } from "./Menu/Captain_log";
 import { Profile } from "./Menu/Profile";
 import { Navigate } from "./Menu/navigation";
+import { MobileMenu } from "./Menu/mobileMenu";
 
 
 export const DashBoard = () =>{
@@ -80,16 +80,13 @@ export const DashBoard = () =>{
     }
     return(
         <div className="dashFrame">
-            {/* <header className="mobileView">
-                <div className="mobileLogo"></div>
-                <div className="mobileMenuIcon"><AiOutlineMenu/></div>
-            </header> */}
-            <Navigate currMenu={currMenu} handleMenu={handleMenu}/>
+            <MobileMenu handleHome={() => handleMenu('Home_page')}/>
+            <Navigate currMenu={currMenu} handleMenu={handleMenu} id='showNavi'/>
             <div className="rightContent">
                 <div className="notification">
                     New Captain's log to be filled before september 25, 2023 06:00 am
                 </div>
-                {/* dynamically render page due to user interaction */}
+                {/* dynamically render page based on user interaction */}
                 {selectedCompo}
             </div>
             

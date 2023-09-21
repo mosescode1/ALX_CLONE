@@ -6,19 +6,30 @@
     grid-template-columns: 80px 5fr;
     overflow: hidden;
     height: 100vh;
+    scrollbar-width: none; /* Hide scroll bar in firefox */
+    -ms-overflow-style: none; /* Hide in internet explored and edge*/
+}
+.dashFrame::-webkit-scrollbar {
+    display: none;
 }
 .rightContent {
     padding: 10px 20px;
     overflow-y: scroll;
+    .notification {
+        border: 1px solid #e4e4e4;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: rgba(248,249,250,255);
+        margin-bottom: 15px;
+    }
 }
-.mobileView {
-    display: none;
-}
-
 @media only screen and (max-width: 769px) {
     .dashFrame {
         grid-template-columns: 1fr;
         overflow-y: scroll;
     }
-
+    
 }
